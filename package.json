@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/viniciusvelasco/nodejs/issues"
   },
-  "homepage": "https://github.com/viniciusvelasco/nodejs#readme"
+  "homepage": "https://github.com/viniciusvelasco/nodejs#readme",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "express": "^4.16.4",
+    "http": "0.0.0"
+  }
 }
