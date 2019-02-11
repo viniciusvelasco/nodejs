@@ -6,6 +6,8 @@ const app = express();
 const router = express.Router();
 mongoose.connect('mongodb://vinicius:vinicius@node-store-shard-00-00-nrnkp.azure.mongodb.net:27017,node-store-shard-00-01-nrnkp.azure.mongodb.net:27017,node-store-shard-00-02-nrnkp.azure.mongodb.net:27017/test?ssl=true&replicaSet=node-store-shard-0&authSource=admin&retryWrites=true');
 
+const Product = require('./models/product');
+
 const index = require('./routes/index');
 const product = require('./routes/product');
 
