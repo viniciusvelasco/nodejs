@@ -44,7 +44,13 @@ exports.put = ('/:id', (req, res, next) => {
 });
 
 exports.delete = ('/', (req, res, next) => {
-    res.status(200).send(req.body);
+    Product
+        .findByIdAndRemove(req.params.id)
+        .then(data => {
+            res.status(200).send({ message: 'Produto removido com sucesso' });
+        }).catch(e => {
+            res.status(400).send(e);
+        })
 });
 
 exports.getBySlug = (req, res, next) => {
